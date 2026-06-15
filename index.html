@@ -38,10 +38,11 @@
         margin: 0;
         color: var(--ink);
         font-family: "SimHei", "Microsoft YaHei", "PingFang SC", sans-serif;
-        background:
-          linear-gradient(135deg, rgba(15, 107, 92, 0.10), transparent 34%),
-          linear-gradient(315deg, rgba(191, 79, 55, 0.10), transparent 28%),
-          linear-gradient(180deg, #fbfcf8 0%, var(--paper) 100%);
+        /* 背景色及渐变修改 */
+        background-color: #e0f6f4;
+        background-image: 
+          radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.7) 0%, transparent 45%),
+          radial-gradient(circle at 85% 75%, rgba(15, 107, 92, 0.08) 0%, transparent 50%);
       }
 
       button,
@@ -101,6 +102,8 @@
         margin-top: 4px;
         font-size: clamp(1.45rem, 3.2vw, 2.52rem);
         line-height: 1.18;
+        /* 大标题颜色修改为浅绿色 */
+        color: #2ea785; 
       }
 
       .toolbar {
@@ -290,20 +293,6 @@
         background: #111;
       }
 
-      .external-video-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 42px;
-        margin-top: 14px;
-        padding: 0 16px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        color: var(--accent);
-        font-weight: 700;
-        text-decoration: none;
-      }
-
       .tribute-footer {
         padding: 12px 0 56px;
         color: var(--accent);
@@ -352,10 +341,6 @@
 
         .video-shell {
           padding: 12px;
-        }
-
-        .external-video-link {
-          width: 100%;
         }
       }
     </style>
@@ -422,9 +407,6 @@
             allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <a id="externalVideoLink" class="external-video-link" href="#" target="_blank" rel="noopener noreferrer">
-            打开 B站原视频
-          </a>
         </div>
       </section>
     </div>
@@ -491,7 +473,6 @@
       const modal = document.querySelector("#videoModal");
       const closeModalButton = document.querySelector("#closeModal");
       const frame = document.querySelector("#manualFrame");
-      const externalVideoLink = document.querySelector("#externalVideoLink");
       const modalTitle = document.querySelector("#modalTitle");
       const modalDescription = document.querySelector("#modalDescription");
       const productCount = document.querySelector("#productCount");
@@ -531,7 +512,6 @@
         modalDescription.textContent = product.description;
         frame.title = `${product.name} 使用说明视频`;
         frame.src = product.embedUrl;
-        externalVideoLink.href = product.videoUrl;
         modal.hidden = false;
         closeModalButton.focus();
       }
