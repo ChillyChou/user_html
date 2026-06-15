@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>康柏产品视频说明书</title>
+    <title>成都电信工会夏季防暑慰问品使用说明</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              display: ['"Noto Serif SC"', '"Source Han Serif SC"', '"STSong"', 'serif'],
-              body: ['"Microsoft YaHei"', '"PingFang SC"', '"Noto Sans CJK SC"', 'sans-serif'],
+              display: ['"SimHei"', '"Microsoft YaHei"', '"PingFang SC"', 'sans-serif'],
+              body: ['"SimHei"', '"Microsoft YaHei"', '"PingFang SC"', 'sans-serif'],
             },
           },
         },
       };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       :root {
         --ink: #171914;
@@ -36,7 +37,7 @@
         min-height: 100vh;
         margin: 0;
         color: var(--ink);
-        font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+        font-family: "SimHei", "Microsoft YaHei", "PingFang SC", sans-serif;
         background:
           linear-gradient(135deg, rgba(15, 107, 92, 0.10), transparent 34%),
           linear-gradient(315deg, rgba(191, 79, 55, 0.10), transparent 28%),
@@ -44,7 +45,7 @@
       }
 
       button,
-      video {
+      iframe {
         font: inherit;
       }
 
@@ -56,7 +57,7 @@
       .brand-bar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 24px;
         padding: 24px 0 18px;
         border-bottom: 1px solid var(--line);
@@ -70,10 +71,9 @@
       }
 
       .brand-logo {
-        width: 64px;
-        height: 64px;
-        border-radius: 8px;
-        box-shadow: 0 18px 38px rgba(15, 107, 92, 0.18);
+        width: 86px;
+        height: 74px;
+        object-fit: contain;
       }
 
       .brand-kicker,
@@ -92,21 +92,15 @@
       h2,
       h3 {
         margin: 0;
-        font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+        font-family: "SimHei", "Microsoft YaHei", "PingFang SC", sans-serif;
         font-weight: 700;
         letter-spacing: 0;
       }
 
       h1 {
         margin-top: 4px;
-        font-size: clamp(1.65rem, 3.5vw, 2.9rem);
-        line-height: 1.08;
-      }
-
-      .brand-note {
-        color: var(--muted);
-        font-size: 0.92rem;
-        white-space: nowrap;
+        font-size: clamp(1.45rem, 3.2vw, 2.52rem);
+        line-height: 1.18;
       }
 
       .toolbar {
@@ -161,14 +155,16 @@
         aspect-ratio: 4 / 3;
         overflow: hidden;
         border-bottom: 1px solid var(--line);
-        background: #eef1ed;
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(219, 245, 239, 0.84)),
+          #e8f7f2;
       }
 
       .media-frame img {
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
 
       .product-copy {
@@ -285,14 +281,35 @@
         padding: 20px;
       }
 
-      .video-shell video,
       .video-shell iframe {
         display: block;
         width: 100%;
         aspect-ratio: 16 / 9;
+        border: 0;
         border-radius: 8px;
         background: #111;
-        border: none;
+      }
+
+      .external-video-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        margin-top: 14px;
+        padding: 0 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--accent);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .tribute-footer {
+        padding: 12px 0 56px;
+        color: var(--accent);
+        font-size: clamp(1.35rem, 3vw, 2.25rem);
+        font-weight: 700;
+        text-align: center;
       }
 
       @media (max-width: 980px) {
@@ -313,12 +330,8 @@
         }
 
         .brand-logo {
-          width: 56px;
-          height: 56px;
-        }
-
-        .brand-note {
-          white-space: normal;
+          width: 76px;
+          height: 66px;
         }
 
         .product-grid {
@@ -340,6 +353,10 @@
         .video-shell {
           padding: 12px;
         }
+
+        .external-video-link {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -348,16 +365,16 @@
       <div class="brand-bar">
         <div class="brand-lockup">
           <img
+            id="brandLogo"
             class="brand-logo"
-            alt="康柏 brand logo"
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f6b5c'/%3E%3Cstop offset='1' stop-color='%23bf4f37'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='160' height='160' rx='20' fill='%23171914'/%3E%3Ccircle cx='118' cy='42' r='24' fill='url(%23g)' opacity='.92'/%3E%3Cpath d='M39 116V42h22v30l31-30h28L84 78l38 38H93L61 84v32H39Z' fill='%23ffffff'/%3E%3C/svg%3E"
+            alt="成都电信工会 Logo"
+            src="assets/logo-cutout.png"
           />
           <div>
-            <p class="brand-kicker">Kangbai Video Manual</p>
-            <h1>康柏产品视频说明书</h1>
+            <p class="brand-kicker">Chengdu Telecom Union Summer Care</p>
+            <h1>成都电信工会-夏季防暑慰问品 使用说明</h1>
           </div>
         </div>
-        <div class="brand-note">HTML5 / Tailwind CSS</div>
       </div>
     </header>
 
@@ -372,6 +389,10 @@
 
       <section id="productGrid" class="product-grid" aria-label="产品列表"></section>
     </main>
+
+    <footer class="site-shell">
+      <p class="tribute-footer">致敬每一位坚守岗位的你</p>
+    </footer>
 
     <div id="videoModal" class="modal-overlay" hidden>
       <section
@@ -393,99 +414,99 @@
             </svg>
           </button>
         </div>
-        <div class="video-shell" id="videoShellContainer"></div>
+        <div class="video-shell">
+          <iframe
+            id="manualFrame"
+            title="产品说明视频"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <a id="externalVideoLink" class="external-video-link" href="#" target="_blank" rel="noopener noreferrer">
+            打开 B站原视频
+          </a>
+        </div>
       </section>
     </div>
 
     <script>
-      const sampleVideo = "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
+      const assetBase = window.location.pathname.includes("/src/") ? "../data/export/assets/" : "assets/";
+      const bilibiliUrl =
+        "https://www.bilibili.com/video/BV1jjJG6UEUr/?spm_id_from=333.1387.homepage.video_card.click&vd_source=4c04b892613e29c77c94fbeb6f8a0af9";
+      const bilibiliEmbedUrl =
+        "https://player.bilibili.com/player.html?bvid=BV1jjJG6UEUr&page=1&high_quality=1&autoplay=1";
 
       const products = [
         {
-          name: "K-Flow 智能净饮机",
-          type: "Kitchen",
-          description: "三步完成滤芯复位、温控设置与日常清洁。",
-          colors: ["#e9f2ed", "#0f6b5c", "#bf4f37"],
-          // 成功自动更新为您提供的真实B站视频BV号
-          bilibiliId: "BV1jjJG6UEUr", 
+          name: "便携户外通勤背包",
+          type: "背包收纳",
+          description: "轻量耐磨，一拉即紧，折叠后便于收纳，适合户外通勤随身携带。",
+          image: `${assetBase}commute-backpack.jpg`,
+          videoUrl: bilibiliUrl,
+          embedUrl: bilibiliEmbedUrl,
         },
         {
-          name: "AirFold 便携投影仪",
-          type: "Vision",
-          description: "快速掌握开机配对、梯形校正和墙面投放。",
-          colors: ["#eef2f8", "#1f5f7a", "#c89f33"],
-          video: sampleVideo,
+          name: "背包/行李箱专用挂扣",
+          type: "出行挂扣",
+          description: "长短松紧随心调节，金属按扣开合利落，加厚 PP 织带承重稳固。",
+          image: `${assetBase}luggage-strap-hook.jpg`,
+          videoUrl: bilibiliUrl,
+          embedUrl: bilibiliEmbedUrl,
         },
         {
-          name: "NovaDock 多口扩展坞",
-          type: "Desk",
-          description: "说明电源、HDMI、网口与高速传输的连接顺序。",
-          colors: ["#f2f4f1", "#4b5965", "#0f7d75"],
-          video: sampleVideo,
+          name: "洛克卷卷杯",
+          type: "便携饮杯",
+          description: "可折叠设计，小巧轻便，食品级硅胶材质，适合冷饮与日常饮水。",
+          image: `${assetBase}lock-collapsible-cup.jpg`,
+          videoUrl: bilibiliUrl,
+          embedUrl: bilibiliEmbedUrl,
         },
         {
-          name: "PulseClean 无线洗地机",
-          type: "Home",
-          description: "覆盖水箱安装、自清洁流程和滚刷维护要点。",
-          colors: ["#f1f5f2", "#264f38", "#d66b4b"],
-          video: sampleVideo,
+          name: "柔性折叠支架",
+          type: "桌面支撑",
+          description: "灵活调节、轻巧便携，可作为手机、平板或笔记本的稳固支架。",
+          image: `${assetBase}flexible-folding-stand.jpg`,
+          videoUrl: bilibiliUrl,
+          embedUrl: bilibiliEmbedUrl,
+        },
+        {
+          name: "冰袖",
+          type: "防晒清凉",
+          description: "男女通用，弹力包容，覆盖手臂防晒需求，夏季户外使用更清爽。",
+          image: `${assetBase}cooling-sleeves.jpg`,
+          videoUrl: bilibiliUrl,
+          embedUrl: bilibiliEmbedUrl,
+        },
+        {
+          name: "制冷高速手持风扇",
+          type: "降温风扇",
+          description: "强劲风力，90度折叠调节，手持与桌面一键切换，半导体制冷快速降温。",
+          image: `${assetBase}handheld-cooling-fan.jpg`,
+          videoUrl: bilibiliUrl,
+          embedUrl: bilibiliEmbedUrl,
         },
       ];
 
       const grid = document.querySelector("#productGrid");
       const modal = document.querySelector("#videoModal");
       const closeModalButton = document.querySelector("#closeModal");
-      const videoShellContainer = document.querySelector("#videoShellContainer");
+      const frame = document.querySelector("#manualFrame");
+      const externalVideoLink = document.querySelector("#externalVideoLink");
       const modalTitle = document.querySelector("#modalTitle");
       const modalDescription = document.querySelector("#modalDescription");
       const productCount = document.querySelector("#productCount");
+      const brandLogo = document.querySelector("#brandLogo");
       let lastActiveElement = null;
 
-      function svgDataUrl(svg) {
-        return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
-      }
-
-      function buildProductImage(product) {
-        const [base, primary, accent] = product.colors;
-
-        return svgDataUrl(`
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-            <defs>
-              <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="${base}"/>
-                <stop offset="1" stop-color="#ffffff"/>
-              </linearGradient>
-              <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity=".24"/>
-              </linearGradient>
-              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#171914" flood-opacity=".18"/>
-              </filter>
-            </defs>
-            <rect width="800" height="600" fill="url(#bg)"/>
-            <circle cx="636" cy="130" r="92" fill="${accent}" opacity=".20"/>
-            <circle cx="126" cy="494" r="126" fill="${primary}" opacity=".11"/>
-            <g filter="url(#shadow)">
-              <rect x="260" y="112" width="280" height="376" rx="44" fill="${primary}"/>
-              <rect x="296" y="152" width="208" height="236" rx="28" fill="url(#shine)"/>
-              <rect x="322" y="412" width="156" height="26" rx="13" fill="${accent}"/>
-              <circle cx="400" cy="456" r="18" fill="#ffffff" opacity=".82"/>
-            </g>
-            <path d="M194 180h90M516 114h98M558 480h72" stroke="${accent}" stroke-width="16" stroke-linecap="round" opacity=".64"/>
-            <text x="54" y="92" fill="#171914" font-size="34" font-family="Microsoft YaHei, sans-serif" font-weight="700">${product.type}</text>
-          </svg>
-        `);
-      }
-
       function renderProducts() {
+        brandLogo.src = `${assetBase}logo-cutout.png`;
         productCount.textContent = products.length;
         grid.innerHTML = products
           .map((product, index) => {
             return `
               <article class="product-card">
                 <div class="media-frame">
-                  <img src="${buildProductImage(product)}" alt="${product.name} 产品图" loading="${index === 0 ? "eager" : "lazy"}" />
+                  <img src="${product.image}" alt="${product.name} 产品图" loading="${index === 0 ? "eager" : "lazy"}" />
                 </div>
                 <div class="product-copy">
                   <p class="product-type">${product.type}</p>
@@ -508,34 +529,15 @@
         lastActiveElement = document.activeElement;
         modalTitle.textContent = product.name;
         modalDescription.textContent = product.description;
-
-        if (product.bilibiliId) {
-          videoShellContainer.innerHTML = `
-            <iframe 
-              src="https://player.bilibili.com/player.html?bvid=${product.bilibiliId}&page=1&high_quality=1&danmaku=0&autoplay=1" 
-              scrolling="no" 
-              border="0" 
-              frameborder="no" 
-              framespacing="0" 
-              allowfullscreen="true">
-            </iframe>
-          `;
-        } else {
-          videoShellContainer.innerHTML = `
-            <video id="manualVideo" controls playsinline preload="metadata" poster="${buildProductImage(product)}">
-              <source src="${product.video}" type="video/mp4">
-            </video>
-          `;
-          const video = document.getElementById("manualVideo");
-          video.play().catch(() => {});
-        }
-
+        frame.title = `${product.name} 使用说明视频`;
+        frame.src = product.embedUrl;
+        externalVideoLink.href = product.videoUrl;
         modal.hidden = false;
         closeModalButton.focus();
       }
 
       function closeModal() {
-        videoShellContainer.innerHTML = ''; 
+        frame.removeAttribute("src");
         modal.hidden = true;
 
         if (lastActiveElement) {
@@ -548,6 +550,7 @@
       grid.addEventListener("click", (event) => {
         const button = event.target.closest("[data-product-index]");
         if (!button) return;
+
         openModal(products[Number(button.dataset.productIndex)]);
       });
 
