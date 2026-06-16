@@ -400,11 +400,14 @@
           </button>
         </div>
         <div class="video-shell">
+          <!-- 这里补充了兼容移动端的全屏属性 -->
           <iframe
             id="manualFrame"
             title="产品说明视频"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
+            allowfullscreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
@@ -415,6 +418,30 @@
       const assetBase = window.location.pathname.includes("/src/") ? "../data/export/assets/" : "assets/";
       
       const products = [
+        {
+          name: "洛克卷卷杯",
+          type: "便携饮杯",
+          description: "可折叠设计，小巧轻便，食品级硅胶材质，适合冷饮与日常饮水。",
+          image: `${assetBase}lock-collapsible-cup.jpg`,
+          videoUrl: "https://www.bilibili.com/video/BV179jG6kEZt/?vd_source=b8209fbcb52a7a8d687fd556c95f30f3",
+          embedUrl: "https://player.bilibili.com/player.html?bvid=BV179jG6kEZt&page=1&high_quality=1&autoplay=1",
+        },
+        {
+          name: "制冷高速手持风扇",
+          type: "降温风扇",
+          description: "强劲风力，90度折叠调节，手持与桌面一键切换，半导体制冷快速降温。",
+          image: `${assetBase}handheld-cooling-fan.jpg`,
+          videoUrl: "https://www.bilibili.com/video/BV1E9jG6kEjU/?vd_source=b8209fbcb52a7a8d687fd556c95f30f3",
+          embedUrl: "https://player.bilibili.com/player.html?bvid=BV1E9jG6kEjU&page=1&high_quality=1&autoplay=1",
+        },
+        {
+          name: "柔性折叠支架",
+          type: "桌面支撑",
+          description: "灵活调节、轻巧便携，可作为手机、平板或笔记本的稳固支架。",
+          image: `${assetBase}flexible-folding-stand.jpg`,
+          videoUrl: "https://www.bilibili.com/video/BV1nmjG62Eah/?vd_source=b8209fbcb52a7a8d687fd556c95f30f3",
+          embedUrl: "https://player.bilibili.com/player.html?bvid=BV1nmjG62Eah&page=1&high_quality=1&autoplay=1",
+        },
         {
           name: "便携户外通勤背包",
           type: "背包收纳",
@@ -430,30 +457,6 @@
           image: `${assetBase}luggage-strap-hook.jpg`,
           videoUrl: "https://www.bilibili.com/video/BV1f9jG6kEPN/?vd_source=b8209fbcb52a7a8d687fd556c95f30f3",
           embedUrl: "https://player.bilibili.com/player.html?bvid=BV1f9jG6kEPN&page=1&high_quality=1&autoplay=1",
-        },
-        {
-          name: "洛克卷卷杯",
-          type: "便携饮杯",
-          description: "可折叠设计，小巧轻便，食品级硅胶材质，适合冷饮与日常饮水。",
-          image: `${assetBase}lock-collapsible-cup.jpg`,
-          videoUrl: "https://www.bilibili.com/video/BV179jG6kEZt/?vd_source=b8209fbcb52a7a8d687fd556c95f30f3",
-          embedUrl: "https://player.bilibili.com/player.html?bvid=BV179jG6kEZt&page=1&high_quality=1&autoplay=1",
-        },
-        {
-          name: "柔性折叠支架",
-          type: "桌面支撑",
-          description: "灵活调节、轻巧便携，可作为手机、平板或笔记本的稳固支架。",
-          image: `${assetBase}flexible-folding-stand.jpg`,
-          videoUrl: "https://www.bilibili.com/video/BV1AxjV6DEWz/?vd_source=b8209fbcb52a7a8d687fd556c95f30f3",
-          embedUrl: "https://player.bilibili.com/player.html?bvid=BV1AxjV6DEWz&page=1&high_quality=1&autoplay=1",
-        },
-        {
-          name: "制冷高速手持风扇",
-          type: "降温风扇",
-          description: "强劲风力，90度折叠调节，手持与桌面一键切换，半导体制冷快速降温。",
-          image: `${assetBase}handheld-cooling-fan.jpg`,
-          videoUrl: "https://www.bilibili.com/video/BV1E9jG6kEjU/?vd_source=b8209fbcb52a7a8d687fd556c95f30f3",
-          embedUrl: "https://player.bilibili.com/player.html?bvid=BV1E9jG6kEjU&page=1&high_quality=1&autoplay=1",
         },
       ];
 
